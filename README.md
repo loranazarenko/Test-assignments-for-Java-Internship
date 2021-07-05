@@ -1,1 +1,1 @@
-# Test-assignments-for-Java-Internship
+# Test assignments for Java Internship
