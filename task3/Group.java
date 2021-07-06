@@ -82,4 +82,9 @@ public class Group extends Academy {
                 && Objects.equals(getSpecializationCode(), group.getSpecializationCode());
     }
 
+    // Overridden method hash
+    @Override
+    public int hashCode() {
+        return getName().hashCode() % getName().length();
+    }
 }

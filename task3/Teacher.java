@@ -56,4 +56,10 @@ public class Teacher extends Person {
                 && Objects.equals(getSubject(), teacher.getSubject())
                 && Objects.equals(getTitle(), teacher.getTitle());
     }
+
+    // Overridden method hash
+    @Override
+    public int hashCode() {
+        return getName().hashCode() % getName().length();
+    }
 }

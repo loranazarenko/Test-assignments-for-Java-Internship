@@ -56,4 +56,10 @@ public class Department extends Academy {
                 && Objects.equals(getGroup(), department.getGroup())
                 && Objects.equals(getTeacher(), department.getTeacher());
     }
+
+    // Overridden method hash
+    @Override
+    public int hashCode() {
+        return getName().hashCode() % getName().length();
+    }
 }

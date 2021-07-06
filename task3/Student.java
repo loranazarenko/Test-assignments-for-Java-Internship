@@ -26,4 +26,10 @@ public class Student extends Person {
         Student student = (Student) o;
         return Objects.equals(getName(), student.getName());
     }
+
+    // Overridden method hash
+    @Override
+    public int hashCode() {
+        return getName().hashCode() % getName().length();
+    }
 }

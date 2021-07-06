@@ -26,4 +26,10 @@ public class Subject extends Academy {
         Subject subject = (Subject) o;
         return Objects.equals(getName(), subject.getName());
     }
+
+    // Overridden method hash
+    @Override
+    public int hashCode() {
+        return getName().hashCode() % getName().length();
+    }
 }

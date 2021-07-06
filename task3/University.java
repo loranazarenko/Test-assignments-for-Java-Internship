@@ -56,4 +56,9 @@ public class University extends Academy {
                 && Objects.equals(getSubjects(), university.getSubjects());
     }
 
+    // Overridden method hash
+    @Override
+    public int hashCode() {
+        return getName().hashCode() % getName().length();
+    }
 }

@@ -42,4 +42,10 @@ public class Faculty extends Academy {
         return Objects.equals(getName(), faculty.getName())
                 && Objects.equals(getDepartment(), faculty.getDepartment());
     }
+
+    // Overridden method hash
+    @Override
+    public int hashCode() {
+        return getName().hashCode() % getName().length();
+    }
 }
